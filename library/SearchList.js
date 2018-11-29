@@ -558,7 +558,7 @@ const styles = StyleSheet.create({
   },
   maskStyle: {
     position: 'absolute',
-    top: Theme.size.headerHeight + Theme.size.searchInputHeight,
+    top: Theme.size.searchInputHeight,
     // top: 0,
     bottom: 0,
     left: 0,

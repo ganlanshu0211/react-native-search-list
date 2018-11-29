@@ -143,6 +143,8 @@ export default class SearchBar extends Component {
             }, this.props.searchTextInputStyle]}
             onChangeText={this.onChange.bind(this)}
             value={this.state.value}
+            clearButtonMode={'always'}
+            clearTextOnFocus={true}
             underlineColorAndroid='transparent'
             returnKeyType='search' />
 
