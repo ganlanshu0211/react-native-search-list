@@ -287,12 +287,6 @@ export default class SearchList extends Component {
 
   enterSearchState () {
     this.setState({isSearching: true})
-    Animated.timing(this.state.animatedValue, {
-      duration: this.props.searchBarToggleDuration || Theme.duration.toggleSearchBar,
-      toValue: 1,
-      useNativeDriver: true
-    }).start(() => {
-    })
   }
 
   exitSearchState () {
@@ -370,21 +364,6 @@ export default class SearchList extends Component {
           flex: 1,
           backgroundColor: this.props.searchListBackgroundColor
         }]}>
-          <Toolbar
-            animatedValue={this.state.animatedValue}
-
-            style={[{
-              opacity: this.state.animatedValue.interpolate({
-                inputRange: [0, 1],
-                outputRange: [1, 0]
-              }),
-              backgroundColor: this.props.toolbarBackgroundColor
-            }]}
-            title={this.props.title}
-            textColor={this.props.titleTextColor}
-            renderBackButton={this.props.renderBackButton || this._renderBackButton.bind(this)}
-            renderRightButton={this.props.renderRightButton}
-          />
 
           <SearchBar
             placeholder={this.props.searchInputPlaceholder ? this.props.searchInputPlaceholder : ''}
