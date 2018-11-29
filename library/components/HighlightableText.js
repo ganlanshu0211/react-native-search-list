@@ -70,7 +70,7 @@ export default class HighlightableText extends Component {
     }
 
     return (
-      <Text style={{flexDirection: 'row'}}>
+      <Text style={{flexDirection: 'row', maxWidth: 200, overflow: 'hidden' }}>
         {titleContents}
       </Text>
     )
