@@ -145,6 +145,7 @@ export default class SearchBar extends Component {
             value={this.state.value}
             clearButtonMode={'always'}
             clearTextOnFocus={true}
+            placeholder={'输入关键词搜索'}
             underlineColorAndroid='transparent'
             returnKeyType='search' />
 
